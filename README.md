@@ -1,5 +1,7 @@
 # blamee.el
 
+<a href="https://melpa.org/#/blamee"><img alt="MELPA" src="https://melpa.org/packages/blamee-badge.svg"/></a>
+
 ![blamee.el sample](img/sample.png)
 
 Chunked `git blame` overlays for Emacs, rendered between the line numbers
@@ -85,7 +87,19 @@ Clone the repository somewhere and point `load-path` at it:
 
 ### MELPA
 
-Not yet available. A MELPA recipe is planned.
+`blamee` is available on [MELPA](https://melpa.org/#/blamee).  Configure
+MELPA (if needed), refresh package contents, then install it:
+
+```elisp
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(package-refresh-contents)
+(package-install 'blamee)
+```
+
+After installation, enable it with `M-x blamee-mode` for the current
+buffer, or `(global-blamee-mode 1)` globally.
 
 ## Usage
 
